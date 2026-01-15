@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h2 {
+            margin-top: 30px;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📰 Fake News Generator</h1>
+
+    <button onclick="generateNews()">Generate Headline</button>
+
+    <h2 id="headline"></h2>
+
+    <script>    
+        const subjects = [
+        "Shahrukh Khan",
+        "Virat Kohli",
+        "Salman Khan",
+        "A flying dog",
+        "An angry elephant",
+        "Bill Gates",
+        "A drunk pigeon",
+        "My neighbour",
+        "A confused robot",
+        "An AI from future",
+        "A talking fridge",
+        "Aliens",
+        "A ghost",
+        "A hacker",
+        "An auto driver",
+        "A YouTuber",
+        "A politician"
+    ];
+
+    const actions = [
+        "making tea",
+        "selling samosa",
+        "driving car",
+        "sleeping",
+        "having fun",
+        "fighting with traffic",
+        "dancing badly",
+        "singing loudly",
+        "hacking NASA",
+        "arguing with mirror",
+        "ordering biryani",
+        "stealing WiFi",
+        "breaking internet",
+        "talking to shoes",
+        "learning Python"
+    ];
+
+    const places = [
+        "at tapri",
+        "in parliament",
+        "on Mars",
+        "inside washing machine",
+        "at India Gate",
+        "under the bed",
+        "inside lift",
+        "on live TV",
+        "inside classroom",
+        "in bathroom",
+        "on the moon",
+        "inside fridge",
+        "on WhatsApp group"
+    ];
+
+        function generateNews() {
+            const subject = subjects[Math.floor(Math.random() * subjects.length)];
+            const action = actions[Math.floor(Math.random() * actions.length)];
+            const place = places[Math.floor(Math.random() * places.length)];
+
+            document.getElementById("headline").innerText =
+                `News Headline: ${subject} ${action} ${place}`;
+        }
+    </script>
+
+</body>
+</html>
